@@ -37,6 +37,6 @@
     </build>
     <scm>
         <developerConnection>scm:git:git@github.com/springframeworkguru/sfg-pet-clinic.git</developerConnection>
-        <tag>0.0.2</tag>
+        <tag>0.0.6</tag>
     </scm>
 </project>
