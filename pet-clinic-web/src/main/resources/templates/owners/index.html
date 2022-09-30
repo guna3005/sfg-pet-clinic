@@ -5,6 +5,22 @@
     <title>Owners list in the app</title>
 </head>
 <body>
-    <h1 th:text="'The list of owners will be displayd here'">this will be over ridden</h1>
+    <h1 th:text="'list of owners'">this will be over ridden</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>first name</th>
+                <th>last name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="owner : ${owners}">
+                <td th:text="${owner?.id}">89</td>
+                <td th:text="${owner?.firstName}">joe</td>
+                <td th:text="${owner?.lastName}">adam</td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 </html>
