@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'owners')}">
+<head>
+    <meta charset="UTF-8">
+    <title>Owners list in the app</title>
+</head>
+<body>
+    <h2 th:text="'list of owners'">this will be over ridden</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th style="width: 150px;">id</th>
+                <th style="width: 150px;">first name</th>
+                <th style="width: 150px;">last name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="owner : ${owners}">
+                <td th:text="${owner?.id}">89</td>
+                <td th:text="${owner?.firstName}">joe</td>
+                <td th:text="${owner?.lastName}">adam</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
